@@ -1,0 +1,407 @@
+:root{
+    --gradient:linear-gradient(70deg,  #ecb204, black);
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    border:none; outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+
+body{
+    background-color: #ecb204;
+
+    background-image: url(maxresdefault.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+*::selection{
+    background:black;
+    color:#fff;
+}
+
+html{
+    font-size: 64.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width:1.5rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:#333;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: linear-gradient(70deg, #ecb204, black);
+}
+
+section{
+    min-height: 100vh;
+    padding:1rem 7%;
+    padding-top:6rem;
+}
+
+.btn{
+    padding:.7rem 3rem;
+    font-size: 2rem;
+    color:#fff;
+    background:black;
+    border-radius: 5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    box-shadow: 0 .1rem .3rem rgba(0,0,0,.3);
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+
+
+.btn::before{
+    content: '';
+    position: absolute;
+    top:-1rem; left:-100%;
+    background:#fff9;
+    height:150%;
+    width:20%;
+    transform: rotate(25deg);
+    z-index: -1;
+    
+    
+}
+
+.btn:hover::before{
+    background-color:  #ecb204;
+    color:  #ecb204;
+    transition: .3s linear;
+    left: 120%;
+  
+}
+
+.heading{
+    color:#444;
+    padding:1rem;
+    font-size: 4rem;
+    text-align: center;
+    font-weight: bolder;
+}
+
+header{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top:0; left: 0;
+    z-index: 1000;
+    padding:1.5rem 7%;
+    background:rgba(0,0,0,.6);
+    box-shadow: 0 .1rem .3rem rgba(0,0,0,.3);
+}
+
+
+
+header .logo img{
+    width: 100%;
+    height: 80px;
+}
+
+header .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+header .navbar ul li{
+    margin:0 1rem;
+}
+
+header .navbar ul li a{
+    font-size: 2rem;
+    color:#fff;
+    text-decoration: none;
+}
+
+header .navbar ul li a.active{
+    color:  #ecb204;
+    text-decoration: underline #ecb204;
+}
+header .navbar ul li a:hover{
+    color:#ecb204;
+}
+
+header #register{
+    font-size: 3rem;
+    color:#fff;
+    cursor: pointer;
+}
+
+header #register:hover{
+    color: #ecb204;
+}
+
+header #menu{
+    font-size: 3rem;
+    color:#fff;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+#body1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  flex-direction: column;
+    min-height: 100vh;
+    padding: 0 10px;
+   
+    margin-top: 60px;
+  }
+  
+  #form1,#form2,#form3{
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  form {
+    padding: 25px;
+    background: #fff;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 7px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  #form1{
+  display: none;
+  }
+  
+  #form2{
+    display: none;
+    }
+  
+    #form3{
+      display: none;
+      }
+
+  form h2 {
+    font-size: 27px;
+    text-align: center;
+    margin: 0px 0 30px;
+  }
+  
+  form .form-group {
+    margin-bottom: 15px;
+    position: relative;
+  }
+  
+  form label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 7px;
+  }
+  
+  form input,
+  form select {
+    height: 45px;
+    padding: 10px;
+    width: 100%;
+    font-size: 15px;
+    outline: none;
+    background: #fff;
+    border-radius: 3px;
+    border: 1px solid #bfbfbf;
+  }
+  
+  form input:focus,
+  form select:focus {
+    border-color: #9a9a9a;
+  }
+  
+  form input.error,
+  form select.error {
+    border-color: #f91919;
+    background: #f9f0f1;
+  }
+  
+  form small {
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+    color: #f91919;
+  }
+  
+  form .password i {
+    position: absolute;
+    right: 0px;
+    height: 45px;
+    top: 28px;
+    font-size: 13px;
+    line-height: 45px;
+    width: 45px;
+    cursor: pointer;
+    color: #939393;
+    text-align: center;
+  }
+  
+  .submit-btn {
+    margin-top: 30px;
+  }
+  
+  .submit-btn input {
+    color: white;
+    border: none;
+    height: auto;
+    font-size: 16px;
+    padding: 13px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    text-align: center;
+    background: #ecb204;
+    transition: 0.2s ease;
+  }
+  
+  .submit-btn input:hover {
+    background: #179b81;
+  }
+
+  
+@media (max-width:768px){
+
+    html{
+        font-size: 55%;
+    }
+
+    header #menu{
+        display: block;
+    }
+
+    header .navbar{
+        position: fixed;
+        top:-120%; left:0;
+        width:100%;
+        background:#444;
+    }
+
+    header .navbar ul{
+        flex-flow: column;
+        padding:2rem 0;
+    }
+
+    header .navbar ul li{
+        margin:1.5rem 0;
+        text-align: center;
+        width:100%;
+    }
+
+    header .navbar ul li a{
+        font-size: 2.5rem;
+        display: block;
+    }
+
+    header .navbar ul li a.active,
+    header .navbar ul li a:hover{
+        color:#f39c12;
+    }
+
+    .fa-times{
+        transform: rotate(180deg);
+    }
+
+    header .navbar.nav-toggle{
+        top:6.4rem;
+    }
+
+    .home h1{
+        font-size: 4rem;
+    }
+
+    .home p{
+        width: auto;
+    }
+
+    .teacher p{
+        width:auto;
+    }
+
+    .contact .row .image{
+        display: none;
+    }
+
+    .about .image video{
+        margin-top: 50px;
+    }
+    .about .image video{
+        margin-top: 50px;
+    }
+    .about .content{
+        margin-top: -30px;
+        flex:1 1 40rem;
+    }
+    
+}
+
+@media (max-width:500px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .contact .row form .box{
+        width:100%;
+    }
+    .about .image video{
+        margin-top: 50px;
+    }
+    .about .content{
+        margin-top: -30px;
+        flex:1 1 40rem;
+    }
+    
+
+
+
+    
+
+
+}
+
+@media (max-width:380px){
+
+    html{
+        font-size: 45%;
+    }
+
+    .about .image video{
+        margin-top: 60px;
+    }
+    .about .content{
+        margin-top: -30px;
+        flex:1 1 40rem;
+    }
+    .about .content h3{
+
+        font-size: 4rem;
+
+    }
+    .home .shape{
+        height: 11rem;
+        bottom: 10px;
+    }
+
+
+}
